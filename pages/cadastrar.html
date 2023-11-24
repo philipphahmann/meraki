@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 
-                <div class="login-container">
+                <form class="login-container">
                     <p class="login-title">Cadastro</p>
                     <div class="login-input-container">
                         <input 
@@ -40,6 +40,7 @@
                             type="text" 
                             placeholder="nome"
                             id="cadastrarNome" 
+                            required
                         >
                     </div>
                     <div class="login-input-container">
@@ -48,6 +49,7 @@
                             type="email" 
                             placeholder="email"
                             id="cadastrarEmail" 
+                            required
                         >
                     </div>
                     <div class="login-input-container">
@@ -56,14 +58,17 @@
                             type="password"
                             placeholder="senha" 
                             id="cadastrarSenha"
+                            required
                         >
                     </div>
+
+                    <div id="mensagemErro"></div>
                     <div class="login-button-container">
                         <button type="button" class="login-button" onclick="cadastrar()">Cadastrar</button>
                     </div>
-
                     <a href="../index.html">Voltar</a>
-                </div>
+                </form>
+
             </div>
         </div>
     </body>

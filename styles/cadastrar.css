@@ -92,3 +92,8 @@ body, html {
     color: #FFF;
     margin-top: .75rem;
 }
+
+#mensagemErro {
+    color: red;
+    font-size: 14px;
+}

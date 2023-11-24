@@ -1,43 +1,49 @@
 function cadastrar() {
-    let cadastrar = {};
+    let nome = document.getElementById("cadastrarNome").value;
+    let email = document.getElementById("cadastrarEmail").value;
+    let senha = document.getElementById("cadastrarSenha").value;
 
-    cadastrar.nome = document.getElementById("cadastrarNome").value;
-    cadastrar.email = document.getElementById("cadastrarEmail").value;
-    cadastrar.senha = document.getElementById("cadastrarSenha").value;
+    if(!nome || !email || !senha) { 
+        document.getElementById('mensagemErro').innerText = '*Preencha todos os campos';
+        return;
+    };
 
-    console.log(JSON.parse(localStorage.getItem('info_usuario')));
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    let listaDeEmailsArmazenados = new Array();
-    listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('info_usuario')) || [];
+    const hasUser = usuarios?.some((user) => user.email === email);
 
-    console.log('email: ', cadastrar.email);
-    console.log('listaDeEmailsArmazenados: ', listaDeEmailsArmazenados);
-
-    const { email } = cadastrar;
-
-    if(listaDeEmailsArmazenados.includes(email)) {
-        console.log('O email já existe na lista.');
+    if(hasUser) {
+        alert('Usuário existente!');
     } else {
-        localStorage.setItem('info_usuario', JSON.stringify(cadastrar));
-        alert('Conta criada com sucesso!');
+        usuarios.push({
+            nome: nome,
+            email: email,
+            senha: senha
+        });
+
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        alert('Usuário cadastrado com sucesso!');
+        window.location.href = '../index.html';
     }
 }
 
 function login() {
-    let login = {};
+    let email = document.getElementById("loginEmail").value;
+    let senha = document.getElementById("loginSenha").value;
 
-    login.email = document.getElementById("loginEmail").value;
-    login.senha = document.getElementById("loginSenha").value;
+    let listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    let listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('email')) || [];
+    const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
 
-    if(listaDeEmailsArmazenados.includes(login.email)) {
-        console.log('O email já existe na lista.');
+    if(usuarioAutenticado){
+        alert('Login bem-sucedido!');
+        window.location.href = './pages/designers.html';
     } else {
-        console.log('O email não existe na lista ou é diferente');
+        alert('Usuário não cadastrado!');
     }
 }
 
 function deslogar() {
-
+    localStorage.removeItem('usuarios');
+    window.location.href = '../index.html';
 }
