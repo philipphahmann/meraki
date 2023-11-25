@@ -1,0 +1,67 @@
+.body {
+    height: 100vh;
+    background-color: #E8E8E8;    
+}
+
+.title-box {
+    background-color: #4F4472;
+    color: #FFF;
+}
+
+.designer-box {
+    background-color: #DBDBDB;
+}
+
+img {
+    width: 125px;
+    height: 125px;
+}
+
+.text-box-start {
+    margin-left: -4rem;
+    padding-left: 5rem;
+    padding-right: 1rem;
+    background-color: #ACAAAD;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.text-box-start:hover {
+    animation: showTextRight;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+.text-box-end {
+    margin-right: -4rem;
+    padding-right: 5rem;
+    padding-left: 1rem;
+    background-color: #ACAAAD;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.text-box-end:hover {
+    animation: showTextLeft;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+.image {
+    z-index: 1;
+}
+
+.text-title {
+    color: #6D6B6E;
+    font-weight: bold;
+}
+
+@keyframes showTextRight{
+    from {margin-left: -5rem;}
+    to {margin-left: -4rem;}
+}
+
+@keyframes showTextLeft{
+    from {margin-right: -5rem;}
+    to {margin-right: -4rem;}
+}
