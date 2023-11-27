@@ -9,18 +9,36 @@
         <meta name="keywords" content="designers, portfolio, senac">
         <meta name="robots" content="index, follow">
         <title>Meraki</title>
-
-        <!-- Referência para uma folha de estilo em arquivo externo -->
-        <link rel="stylesheet" href="../styles/cadastrar.css">
         
-        <!-- Referência para código Javascript em arquivo externo -->
+        <link rel="stylesheet" href="../styles/cadastrar.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <script type="text/javascript" language="javascript" src="../scripts/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="alertaErro" class="alerta alerta-erro"></div>
+
+        <nav class="navbar bg-body-tertiary p-3">
+            <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="../../assets/logo.png" alt="logo" class="img-fluid w-25" />
+            </a>
+            <div class="d-flex">
+                <a href="../index.html">
+                    <button class="btn btn-outline-primary px-3" type="button" >Login</button>
+                </a>
+            </div>
+            </div>
+        </nav>
+
         <div class="container">
             <div class="box">
-                <div class="info-container">
-                    <p class="info-img">Meraki</p>
+                <div class="info-container text-center">
+                    <img
+                    class="img-fluid mt-5 mb-4"
+                    src="../assets/logo.png"
+                    alt="logo"
+                    />
                     <p class="info-title">A excelência é o padrão.</p>
                     <div class="info-texto-container">
                         <p class="info-texto">
@@ -33,40 +51,17 @@
                 </div>
                 
                 <form class="login-container">
-                    <p class="login-title">Cadastro</p>
+                    <p class="h3 text-center text-light my-4">Cadastro</p>
                     <div class="login-input-container">
-                        <input 
-                            class="login-input"
-                            type="text" 
-                            placeholder="nome"
-                            id="cadastrarNome" 
-                            required
-                        >
+                        <input type="email" class="form-control" placeholder="email" id="cadastrarEmail">
                     </div>
                     <div class="login-input-container">
-                        <input 
-                            class="login-input"
-                            type="email" 
-                            placeholder="email"
-                            id="cadastrarEmail" 
-                            required
-                        >
-                    </div>
-                    <div class="login-input-container">
-                        <input 
-                            class="login-input"
-                            type="password"
-                            placeholder="senha" 
-                            id="cadastrarSenha"
-                            required
-                        >
+                        <input type="password" class="form-control" placeholder="senha" id="cadastrarSenha">
                     </div>
 
-                    <div id="mensagemErro"></div>
                     <div class="login-button-container">
                         <button type="button" class="login-button" onclick="cadastrar()">Cadastrar</button>
                     </div>
-                    <a href="../index.html">Voltar</a>
                 </form>
 
             </div>

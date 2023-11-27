@@ -1,10 +1,9 @@
 function cadastrar() {
-    let nome = document.getElementById("cadastrarNome").value;
     let email = document.getElementById("cadastrarEmail").value;
     let senha = document.getElementById("cadastrarSenha").value;
 
-    if(!nome || !email || !senha) { 
-        document.getElementById('mensagemErro').innerText = '*Preencha todos os campos';
+    if(!email || !senha) { 
+        popup('Preencha todos os campos!');
         return;
     };
 
@@ -13,16 +12,14 @@ function cadastrar() {
     const hasUser = usuarios?.some((user) => user.email === email);
 
     if(hasUser) {
-        alert('Usuário existente!');
+        popup('Usuário existente!');
     } else {
         usuarios.push({
-            nome: nome,
             email: email,
             senha: senha
         });
 
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        alert('Usuário cadastrado com sucesso!');
         window.location.href = '../index.html';
     }
 }
@@ -31,19 +28,33 @@ function login() {
     let email = document.getElementById("loginEmail").value;
     let senha = document.getElementById("loginSenha").value;
 
+    if(!email || !senha) { 
+        popup('Preencha todos os campos!');
+        return;
+    };
+
     let listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
 
     if(usuarioAutenticado){
-        alert('Login bem-sucedido!');
         window.location.href = './pages/designers.html';
     } else {
-        alert('Usuário não cadastrado!');
+        popup('Usuário não cadastrado!')
     }
 }
 
 function deslogar() {
     localStorage.removeItem('usuarios');
-    window.location.href = '../index.html';
+    window.location.href = '/index.html';
+}
+
+function popup(mensagem){
+    const alerta = document.getElementById('alertaErro');
+    alerta.innerHTML = mensagem;
+    alerta.style.display = 'block';
+
+    setTimeout(function() {
+        alerta.style.display = 'none';
+    }, 3000);
 }

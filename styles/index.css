@@ -92,3 +92,21 @@ body, html {
     color: #FFF;
     margin-top: .75rem;
 }
+
+.alerta {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alerta-erro {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
