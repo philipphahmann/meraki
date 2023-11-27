@@ -17,30 +17,29 @@
 </head>
 <body>
   <div class="container-fluid" style="height: 100dvh">
-	<nav class="navbar bg-body-tertiary p-3">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="/pages/designers.html">
-				<img src="/assets/logo.png" alt="logo" class="img-fluid w-25"/>
+	<nav class="navbar bg-body-tertiary">
+		<div class="container-fluid row">
+			<a class="col navbar-brand" href="/pages/designers.html">
+				<img src="/assets/logo.png" alt="logo" class="img-fluid" style="height: 2.5rem"/>
 			</a>
-			<div class="d-flex">
-			<div class="dropdown me-3">
-				<button class="btn btn-outline-secondary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
-				<ul class="dropdown-menu">
-				<li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a></li>
-				<li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
-				<li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
-				<li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a></li>
-				<li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da Silveira</a></li>
-				</ul>
-			</div>
-			<button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
+			<div class="col d-flex justify-content-end">
+				<div class="dropdown me-3">
+					<button class="btn btn-outline-secondary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a></li>
+						<li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
+						<li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
+						<li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a></li>
+						<li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da Silveira</a></li>
+					</ul>
+				</div>
+				<button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
 			</div>
 		</div>
 	</nav>
 
     <div class="d-flex justify-content-center mt-4 text-center">
-      <div class="shadow p-3 rounded w-25 title-box d-none d-md-block h2 text-light">DESIGNERS</div>
-      <div class="shadow p-3 rounded w-25 title-box d-md-none h3 text-light">DESIGNERS</div>
+      <div class="shadow p-3 rounded title-box h2 text-light">DESIGNERS</div>
     </div>
 
     <div class="mx-auto w-75 p-5 rounded designer-box" style="margin-top: -2.5rem;">

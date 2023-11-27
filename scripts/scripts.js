@@ -1,11 +1,17 @@
 function cadastrar() {
     let email = document.getElementById("cadastrarEmail").value;
     let senha = document.getElementById("cadastrarSenha").value;
+    let confirmarSenha = document.getElementById("cadastrarConfirmarSenha").value;
 
-    if(!email || !senha) { 
+    if(!email || !senha || !confirmarSenha) { 
         popup('Preencha todos os campos!');
         return;
     };
+
+    if(!senha !== !confirmarSenha) {
+        popup('Senhas diferentes!');
+        return;
+    }
 
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
@@ -20,7 +26,7 @@ function cadastrar() {
         });
 
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        window.location.href = '../index.html';
+        window.location.href = '/index.html';
     }
 }
 
@@ -38,7 +44,7 @@ function login() {
     const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
 
     if(usuarioAutenticado){
-        window.location.href = './pages/designers.html';
+        window.location.href = '/pages/designers.html';
     } else {
         popup('Usuário não cadastrado!')
     }
