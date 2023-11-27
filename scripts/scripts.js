@@ -8,7 +8,7 @@ function cadastrar() {
         return;
     };
 
-    if(!senha !== !confirmarSenha) {
+    if(senha !== confirmarSenha) {
         popup('Senhas diferentes!');
         return;
     }
