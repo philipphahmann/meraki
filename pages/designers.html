@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Livia Hahmann">
-  <meta name="description" content="Projeto Programar - Meraki">
-  <meta name="keywords" content="designers, portfolio, senac">
-  <meta name="robots" content="index, follow">
-  <title>Designers</title>
 
-  <link rel="stylesheet" href="/styles/designers.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  
-  <script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Livia Hahmann">
+	<meta name="description" content="Projeto Programar - Meraki">
+	<meta name="keywords" content="designers, portfolio, senac">
+	<meta name="robots" content="index, follow">
+	<title>Designers</title>
+
+	<link rel="stylesheet" href="/styles/designers.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+	<script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <div class="container-fluid" style="height: 100dvh">
-	<nav class="navbar bg-body-tertiary">
-		<div class="container-fluid row">
-			<a class="col navbar-brand" href="/pages/designers.html">
-				<img src="/assets/logo.png" alt="logo" class="img-fluid" style="height: 2.5rem"/>
-			</a>
-			<div class="col d-flex justify-content-end">
-				<div class="dropdown me-3">
-					<button class="btn btn-outline-secondary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a></li>
-						<li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
-						<li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
-						<li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a></li>
-						<li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da Silveira</a></li>
-					</ul>
+	<div class="container-fluid" style="height: 100dvh">
+		<nav class="navbar bg-body-tertiary">
+			<div class="container-fluid row">
+				<a class="col navbar-brand" href="/pages/designers.html">
+					<img src="/assets/logo.png" alt="logo" class="img-fluid" style="height: 2.5rem" />
+				</a>
+				<div class="col d-flex justify-content-end">
+					<div class="dropdown me-3">
+						<button class="btn btn-outline-secondary dropdown-toggle px-3" type="button"
+							data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a>
+							</li>
+							<li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
+							<li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
+							<li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a>
+							</li>
+							<li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da
+									Silveira</a></li>
+						</ul>
+					</div>
+					<button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
 				</div>
-				<button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
+			</div>
+		</nav>
+
+		<div class="d-flex justify-content-center mt-4 text-center">
+			<div class="shadow p-3 rounded title-box h2 text-light">DESIGNERS</div>
+		</div>
+
+		<div class="mx-auto w-75 p-5 rounded designer-box" style="margin-top: -2.5rem;">
+			<div class="d-flex justify-content-start mb-3 img-container">
+				<img src="/assets/photos/livia_hahmann.png" alt="foto livia hahmann"
+				class="img-fluid rounded-circle image">
+				<div class="text-white align-self-end rounded text-box-start shadow py-2">
+					<div class="text-title">Livia Hahmann</div>
+					<div class="text-title">19 anos</div>
+					<div>Especializada em ilustração e diagramação</div>
+				</div>
+			</div>
+
+			<div class="d-flex justify-content-end mb-3 img-container">
+				<div class="text-white align-self-end rounded text-box-end text-end py-2">
+					<div class="text-title">Julia Santos</div>
+					<div class="text-title">18 anos</div>
+					<div>Especializada em criação de marca</div>
+				</div>
+				<img src="/assets/photos/julia_santos.png" alt="foto julia santos"
+					class="img-fluid rounded-circle image">
+			</div>
+
+			<div class="d-flex justify-content-start mb-3 img-container">
+				<img src="/assets/photos/kevyn_borges.png" alt="foto kevyn borges"
+					class="img-fluid rounded-circle image">
+				<div class="text-white align-self-end rounded text-box-start py-2">
+					<div class="text-title">Kevyn Borges</div>
+					<div class="text-title">20 anos</div>
+					<div>Especializado em criação de marcas e produtos</div>
+				</div>
+			</div>
+
+			<div class="d-flex justify-content-end mb-3 img-container">
+				<div class="text-white align-self-end rounded text-box-end text-end py-2">
+					<div class="text-title">Kelly de Paula</div>
+					<div class="text-title">21 anos</div>
+					<div>Especializada em criação de marca e <i>lettering</i></div>
+				</div>
+				<img src="/assets/photos/kelly_de_paula.png" alt="foto kelly de paula"
+					class="img-fluid rounded-circle image">
+			</div>
+
+			<div class="d-flex justify-content-start img-container">
+				<img src="/assets/photos/isabella_da_silveira.png" alt="foto isabella"
+					class="img-fluid rounded-circle image">
+				<div class="text-white align-self-end rounded text-box-start text-right py-2">
+					<div class="text-title">Isabella da Silveira</div>
+					<div class="text-title">18 anos</div>
+					<div>Especializada em ilustração e diagramação</div>
+				</div>
 			</div>
 		</div>
-	</nav>
-
-    <div class="d-flex justify-content-center mt-4 text-center">
-      <div class="shadow p-3 rounded title-box h2 text-light">DESIGNERS</div>
-    </div>
-
-    <div class="mx-auto w-75 p-5 rounded designer-box" style="margin-top: -2.5rem;">
-      <div class="d-flex justify-content-start mb-3">
-          <img src="/assets/photos/livia_hahmann.png" alt="foto livia hahmann" class="img-fluid rounded-circle image">
-        <div class="text-white align-self-end rounded text-box-start shadow py-2">
-          <div class="text-title">Livia Hahmann</div>
-          <div class="text-title">19 anos</div>
-          <div>Especializada em ilustração e diagramação</div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end mb-3">
-        <div class="text-white align-self-end rounded text-box-end text-end py-2">
-          <div class="text-title">Julia Santos</div>
-          <div class="text-title">18 anos</div>
-          <div>Especializada em criação de marca</div>
-        </div>
-        <img src="/assets/photos/julia_santos.png" alt="foto julia santos" class="img-fluid rounded-circle image">
-      </div>
-
-      <div class="d-flex justify-content-start mb-3">
-        <img src="/assets/photos/kevyn_borges.png" alt="foto kevyn borges" class="img-fluid rounded-circle image">
-        <div class="text-white align-self-end rounded text-box-start py-2">
-          <div class="text-title">Kevyn Borges</div>
-          <div class="text-title">20 anos</div>
-          <div>Especializado em criação de marcas e produtos</div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end mb-3">
-        <div class="text-white align-self-end rounded text-box-end text-end py-2">
-          <div class="text-title">Kelly de Paula</div>
-          <div class="text-title">21 anos</div>
-          <div>Especializada em criação de marca e <i>lettering</i></div>
-        </div>
-        <img src="/assets/photos/kelly_de_paula.png" alt="foto kelly de paula" class="img-fluid rounded-circle image">
-      </div>
-
-      <div class="d-flex justify-content-start">
-        <img src="/assets/photos/isabella_da_silveira.png" alt="foto isabella" class="img-fluid rounded-circle image">
-        <div class="text-white align-self-end rounded text-box-start text-right py-2">
-          <div class="text-title">Isabella da Silveira</div>
-          <div class="text-title">18 anos</div>
-          <div>Especializada em ilustração e diagramação</div>
-        </div>
-      </div>
-    </div>
-  </div>
+	</div>
 </body>
+
 </html>

@@ -1,3 +1,22 @@
+verificarLogin();
+
+function verificarLogin() {
+    const autenticado = localStorage.getItem('autenticado') === 'true';
+    const paginaAtual = window.location.pathname;
+    const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html'];
+    const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
+
+    // usuário logado
+    if (autenticado && !precisaAutenticacao) {
+        window.location.href = '/pages/designers.html';
+    }
+
+    // usuário deslogado
+    if (!autenticado && precisaAutenticacao) {
+        window.location.href = '/index.html';
+    }
+}
+
 function cadastrar() {
     let email = document.getElementById("cadastrarEmail").value;
     let senha = document.getElementById("cadastrarSenha").value;
@@ -15,9 +34,9 @@ function cadastrar() {
 
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    const hasUser = usuarios?.some((user) => user.email === email);
+    const usuarioExistente = usuarios?.some((user) => user.email === email);
 
-    if(hasUser) {
+    if(usuarioExistente) {
         popup('Usuário existente!');
     } else {
         usuarios.push({
@@ -44,6 +63,7 @@ function login() {
     const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
 
     if(usuarioAutenticado){
+        localStorage.setItem('autenticado', 'true');
         window.location.href = '/pages/designers.html';
     } else {
         popup('Usuário não cadastrado!')
@@ -51,7 +71,7 @@ function login() {
 }
 
 function deslogar() {
-    localStorage.removeItem('usuarios');
+    localStorage.setItem('autenticado', 'false');
     window.location.href = '/index.html';
 }
 

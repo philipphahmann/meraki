@@ -26,7 +26,7 @@ img {
     transition: opacity 1s ease-in-out;
 }
 
-.text-box-start:hover {
+.img-container:hover .text-box-start {
     animation: showTextRight;
     animation-duration: 2s;
     opacity: 1;
@@ -41,7 +41,7 @@ img {
     transition: opacity 1s ease-in-out;
 }
 
-.text-box-end:hover {
+.img-container:hover .text-box-end {
     animation: showTextLeft;
     animation-duration: 2s;
     opacity: 1;
