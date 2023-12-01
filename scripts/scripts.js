@@ -8,11 +8,13 @@ function verificarLogin() {
 
     // usuário logado
     if (autenticado && !precisaAutenticacao) {
+        console.log('1');
         window.location.href = '/pages/designers.html';
     }
 
     // usuário deslogado
     if (!autenticado && precisaAutenticacao) {
+        console.log('2');
         window.location.href = '/index.html';
     }
 }
