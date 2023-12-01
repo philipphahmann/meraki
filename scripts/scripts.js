@@ -12,9 +12,10 @@ function verificarLogin() {
     } else if (!autenticado && precisaAutenticacao) {
         console.log('2');
         window.location.href = '/index.html';
-    } else {
+    } else if (!autenticado && !precisaAutenticacao){
         console.log('3');
         if(window.location.href == paginaAtual){
+            console.log('4');
             window.location.href = paginaAtual;
         }
     }
