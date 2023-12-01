@@ -6,16 +6,17 @@ function verificarLogin() {
     const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html'];
     const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
 
-    // usuário logado
     if (autenticado && !precisaAutenticacao) {
         console.log('1');
         window.location.href = '/pages/designers.html';
-    }
-
-    // usuário deslogado
-    if (!autenticado && precisaAutenticacao) {
+    } else if (!autenticado && precisaAutenticacao) {
         console.log('2');
         window.location.href = '/index.html';
+    } else {
+        console.log('3');
+        if(window.location.href == paginaAtual){
+            window.location.href = paginaAtual;
+        }
     }
 }
 
