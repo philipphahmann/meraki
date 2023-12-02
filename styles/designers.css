@@ -7,6 +7,7 @@
     font-family: 'Paytone One', sans-serif;
     background-color: #4F4472;
     color: #FFF;
+    letter-spacing: 3px;
 }
 
 .designer-box {
@@ -67,7 +68,8 @@ dialog {
     background-color: #776C9987;
     border-radius: 2.5rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
-    width: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 dialog .title-container {

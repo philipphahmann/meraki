@@ -51,9 +51,6 @@ function verificarLogin() {
     const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html', '/index', '/pages/cadastrar'];
     const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
     
-    console.log('atual', paginaAtual)
-    console.log('href', window.location.href)
-
     if (autenticado && !precisaAutenticacao) {
         window.location.href = '/pages/designers.html';
     } 
@@ -80,20 +77,22 @@ function cadastrar() {
         return;
     }
 
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    const usuarioExistente = usuarios?.some((user) => user.email === email);
-
-    if(usuarioExistente) {
-        alerta('Usuário existente!');
-    } else {
-        usuarios.push({
-            email: email,
-            senha: senha
-        });
-
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        window.location.href = '/index.html';
+    if(validarEmail(email)){
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
+        const usuarioExistente = usuarios?.some((user) => user.email === email);
+    
+        if(usuarioExistente) {
+            alerta('Usuário existente!');
+        } else {
+            usuarios.push({
+                email: email,
+                senha: senha
+            });
+    
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+            window.location.href = '/index.html';
+        }
     }
 }
 
@@ -106,16 +105,32 @@ function login() {
         return;
     };
 
-    let listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
-
-    if(usuarioAutenticado){
-        localStorage.setItem('autenticado', 'true');
-        window.location.href = '/pages/designers.html';
-    } else {
-        alerta('Usuário não cadastrado!')
+    if(validarEmail(email)){
+        let listaDeEmailsArmazenados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
+        const usuarioAutenticado = listaDeEmailsArmazenados.find(user => user.email === email && user.senha === senha);
+    
+        if(usuarioAutenticado){
+            localStorage.setItem('autenticado', 'true');
+            window.location.href = '/pages/designers.html';
+        } else {
+            alerta('Usuário não cadastrado!')
+        }
     }
+}
+
+function validarEmail(email){
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let emailValido;
+
+    if (!emailRegex.test(email)) {
+        alerta(`Por favor, insira um endereço de e-mail válido. O formato aceito é \'seuemail@examplo.com\'.`);
+        emailValido = false;
+    } else {
+        emailValido = true;
+    }
+
+    return emailValido;
 }
 
 function deslogar() {
