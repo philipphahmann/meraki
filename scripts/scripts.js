@@ -50,6 +50,9 @@ function verificarLogin() {
     const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html'];
     const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
     
+    console.log('atual', paginaAtual)
+    console.log('href', window.location.href)
+
     if (autenticado && !precisaAutenticacao) {
         window.location.href = '/pages/designers.html';
     } 
