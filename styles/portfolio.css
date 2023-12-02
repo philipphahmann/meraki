@@ -41,7 +41,7 @@ img {
     height: 100%;
 }
 
-.overlay-title-vertical {
+/* .overlay-title-large {
     font-family: 'Paytone One', sans-serif;
     width: 100%;
     margin-top: 10%;
@@ -50,20 +50,20 @@ img {
     position: absolute;
     text-align: center;
     transform: rotate(-5deg)skewX(-5deg);
-}
+} */
 
-.overlay-text-vertical {
+/* .overlay-text-large {
     font-family: 'Inter', sans-serif;
     text-align: justify;
     color: white;
     font-size: 1rem;
-    margin-top: 50%;
+    margin-top: 55%;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-}
+} */
 
-.overlay-title-horizontal {
+/* .overlay-title-small {
     font-family: 'Paytone One', sans-serif;
     width: 100%;
     margin-top: 10%;
@@ -71,17 +71,51 @@ img {
     font-size: 1.5rem;
     position: absolute;
     text-align: center;
-    font: fallback;
+    transform: rotate(-5deg)skewX(-5deg);
+} */
+
+.overlay-title-base {
+    font-family: 'Paytone One', sans-serif;
+    width: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
     transform: rotate(-5deg)skewX(-5deg);
 }
 
-.overlay-text-horizontal {
+.overlay-title-large {
+    margin-top: 10%;
+    font-size: 3rem;
+}
+
+.overlay-title-small {
+    margin-top: 10%;
+    font-size: 1.5rem;
+}
+
+.overlay-title-smaller {
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+.overlay-text-base {
     font-family: 'Inter', sans-serif;
-    text-align: center;
+    text-align: justify;
     color: white;
     font-size: 1rem;
-    margin-top: 20%;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+
+.overlay-text-large {
+    margin-top: 55%;
+}
+
+.overlay-text-small {
+    margin-top: 30%;
+}
+
+.overlay-text-smaller {
+    margin-top: 25%;
 }

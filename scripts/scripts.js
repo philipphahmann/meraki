@@ -6,12 +6,12 @@ function validarPagina() {
         const modais = [
             {
                 modal_title: 'CONHEÇA OS DESIGNERS',
-                modal_text: 'Conheça nossos Designers, e selecione o que secaixa melhor na função na qual você procura! Cada membro do nosso time é especializado em uma área dentro de Design, temos uma diversidade de habilidades para atender o seu trabalho.',
+                modal_text: 'Conheça nossos Designers, e selecione o que se encaixa melhor na função que você procura! Cada membro do nosso time é especializado em uma área dentro de Design, temos uma diversidade de habilidades para atender o seu trabalho.',
                 modal_button: 'arrow_forward'
             },
             {
                 modal_title: 'VAMOS LÁ!',
-                modal_text: 'Com o cursor do mouse, passe por cima de alguma foto de um dos membros de nossa equipe para conhecer suas informações básicas e habilidades. Clicando na foto você vai ser redirecionado para o portifólio daquele Designer.',
+                modal_text: 'Com o cursor do mouse, passe por cima de alguma foto de um dos membros de nossa equipe para conhecer suas informações básicas e habilidades. No menu superior direito, confira o portfolio de cada integrante.',
                 modal_button: 'done'
             }
         ];

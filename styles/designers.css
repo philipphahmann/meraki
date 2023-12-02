@@ -68,8 +68,7 @@ dialog {
     background-color: #776C9987;
     border-radius: 2.5rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 500px;
 }
 
 dialog .title-container {

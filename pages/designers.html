@@ -65,8 +65,8 @@
 			</div>
 		</nav>
 
-		<div class="d-flex justify-content-center mt-4 text-center">
-			<div class="shadow p-3 rounded title-box h2 text-light"><b>DESIGNERS</b></div>
+		<div class="d-flex justify-content-center mt-4 text-center" >
+			<div class="shadow p-3 rounded title-box h2 text-light" id="p5js"></div>
 		</div>
 
 		<div class="mx-auto w-75 p-5 rounded designer-box" style="margin-top: -2.5rem;">
@@ -121,6 +121,43 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+	<script>
+	  let x = 0;
+	  let texto = 'Designers';
+  
+	  function setup() {
+		let canvas = createCanvas(200, 50);
+		canvas.parent('p5js'); 
+		noStroke();
+	  }
+  
+	  function draw() {
+		clear();
+
+		background(255, 0);
+  
+		// Desenha o retângulo
+		fill(255, 0);
+		rect(0, 0, width, height);
+  
+		// Adiciona o texto no centro do retângulo
+		fill(255);
+		textSize(36);
+		textFont('Paytone One');
+		textAlign(CENTER, CENTER);
+		text(texto, x, height / 2);
+  
+		// Move o texto para a direita
+		x = x + 2;
+  
+		// Reinicia a posição do texto quando ele sair completamente à direita
+		if (x > width) {
+		  x = -textWidth(texto);
+		}
+	  }
+	</script>
 </body>
 
 </html>
