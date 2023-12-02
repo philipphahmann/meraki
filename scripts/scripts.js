@@ -7,20 +7,11 @@ function verificarLogin() {
     const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
 
     if (autenticado && !precisaAutenticacao) {
-        console.log('1');
         window.location.href = '/pages/designers.html';
-    } else if (!autenticado && precisaAutenticacao) {
-        console.log('2');
+    } 
+    
+    if (!autenticado && precisaAutenticacao) {
         window.location.href = '/index.html';
-    } else if (!autenticado && !precisaAutenticacao){
-        console.log('3');
-        console.log('pagina atual', paginaAtual);
-        console.log('pagina href', window.location.href);
-
-        if(window.location.href == paginaAtual){
-            console.log('4');
-            window.location.href = paginaAtual;
-        }
     }
 }
 
