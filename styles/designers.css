@@ -4,6 +4,7 @@
 }
 
 .title-box {
+    font-family: 'Paytone One', sans-serif;
     background-color: #4F4472;
     color: #FFF;
 }
@@ -52,9 +53,48 @@ img {
 }
 
 .text-title {
+    font-family: 'Paytone One', sans-serif;
     color: #6D6B6E;
     font-weight: bold;
 }
+
+dialog::backdrop {
+    background-color: #D9D9D9CF;
+}
+
+dialog {
+    border: none;
+    background-color: #776C9987;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    width: 40%;
+}
+
+dialog .title-container {
+    justify-content: center;
+}
+
+.modal-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.5rem;
+    background-color: #4F4472;
+    border-radius: 25px;
+    color: #FFF;
+}
+
+dialog .text-container {
+    text-align: justify;
+    font-family: 'Inter', sans-serif;
+}
+
+dialog button {
+    padding: 5px 25px;
+    border-radius: 2.5em;
+    background-color: #4F4472;
+    color: #FFF;
+}
+
+.material-icons.md-36 { font-size: 36px; }
 
 @keyframes showTextRight{
     from {margin-left: -5rem;}
