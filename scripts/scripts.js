@@ -1,7 +1,8 @@
 function validarPagina() {
     const paginaAtual = window.location.pathname;
+    const url = '/pages/designers.html';
 
-    if (paginaAtual === '/pages/designers.html') {
+    if (url.includes(paginaAtual)) {
         const modais = [
             {
                 modal_title: 'CONHEÇA OS DESIGNERS',
@@ -47,7 +48,7 @@ window.onload = validarPagina;
 function verificarLogin() {
     const autenticado = localStorage.getItem('autenticado') === 'true';
     const paginaAtual = window.location.pathname;
-    const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html'];
+    const paginasSemAutenticacao = ['/index.html', '/pages/cadastrar.html', '/index', '/pages/cadastrar'];
     const precisaAutenticacao = !paginasSemAutenticacao.includes(paginaAtual);
     
     console.log('atual', paginaAtual)
