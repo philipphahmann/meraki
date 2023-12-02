@@ -1,109 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Livia Hahmann, Kevyn Borges, Isabella da Silveira, Kelly de Paula e Julia Santos">
+        <meta name="description" content="Projeto Programar - Meraki">
+        <meta name="keywords" content="designers, portfolio, senac">
+        <meta name="robots" content="index, follow">
+        <title>Portfolio - Kelly de Paula</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Livia Hahmann">
-    <meta name="description" content="Projeto Programar - Meraki">
-    <meta name="keywords" content="designers, portfolio, senac">
-    <meta name="robots" content="index, follow">
-    <title>Portfolio - Kelly de Paula</title>
+        <link rel="stylesheet" href="/styles/portfolio.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/styles/portfolio.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Paytone+One&display=swap" rel="stylesheet">
+    </head>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Paytone+One&display=swap" rel="stylesheet">
-
-    <script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="container-fluid" style="height: 100dvh">
-        <nav class="navbar bg-body-tertiary p-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/pages/designers.html">
-                    <img src="/assets/logo.png" alt="logo" class="img-fluid w-25" />
-                </a>
-                <div class="d-flex">
-                    <a href="/pages/designers.html">
-                        <button type="button" class="btn btn-outline-secondary px-3 me-3">Designers</button>
+    <body>
+        <div class="container-fluid" style="height: 100dvh">
+            <nav class="navbar bg-body-tertiary p-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/pages/designers.html">
+                        <img src="/assets/logo.png" alt="logo" class="img-fluid w-25" />
                     </a>
-                    <div class="dropdown me-3">
-                        <button class="btn btn-outline-secondary dropdown-toggle px-3" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da
-                                    Silveira</a></li>
-                        </ul>
+                    <div class="d-flex">
+                        <a href="/pages/designers.html">
+                            <button type="button" class="btn btn-outline-secondary px-3 me-3">Designers</button>
+                        </a>
+                        <div class="dropdown me-3">
+                            <button class="btn btn-outline-secondary dropdown-toggle px-3" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pages/portfolio/livia_hahmann.html">Livia Hahmann</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da Silveira</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
                     </div>
-                    <button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <p class="title">KELLY DE PAULA</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-12 d-flex flex-column mb-3">
-                    <div class="row mb-3 text-center img-container flex-grow-1">
-                        <img src="/assets/portfolio/kelly_de_paula/kelly_1.png" class="full-size" alt="Disco Woodstock">
-                        <div class="overlay">
-                            <div class="overlay-title-base overlay-title-small">DISCO WOODSTOCK</div>
-                            <div class="overlay-text-base overlay-text-small">
-                                Disco com músicas do Woodstock em seu 54º aniversário, apresentando lettering groovy e
-                                psicodélico.
+            <p class="title">KELLY DE PAULA</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-12 d-flex flex-column mb-3">
+                        <div class="row mb-3 text-center img-container flex-grow-1">
+                            <img src="/assets/portfolio/kelly_de_paula/kelly_1.png" class="full-size" alt="Disco Woodstock">
+                            <div class="overlay">
+                                <div class="overlay-title-base overlay-title-small">DISCO WOODSTOCK</div>
+                                <div class="overlay-text-base overlay-text-small">
+                                    Disco com músicas do Woodstock em seu 54º aniversário, apresentando lettering groovy e
+                                    psicodélico.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row img-container flex-grow-1">
+                            <img src="/assets/portfolio/kelly_de_paula/kelly_2.png" class="full-size" alt="Cafeteria">
+                            <div class="overlay">
+                                <div class="overlay-title-base overlay-title-small">CAFETERIA</div>
+                                <div class="overlay-text-base overlay-text-small">
+                                    Marca de cafeteria temática Queen: xícara se transforma em microfone de Freddie Mercury,
+                                    unindo café e rock. Cores amarelo, preto, branco e cinza para elegância e protesto.
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row img-container flex-grow-1">
-                        <img src="/assets/portfolio/kelly_de_paula/kelly_2.png" class="full-size" alt="Cafeteria">
+                    <div class="col-lg-4 img-container mb-3">
+                        <img src="/assets/portfolio/kelly_de_paula/kelly_3.png" class="full-size" alt="Cartaz índio">
                         <div class="overlay">
-                            <div class="overlay-title-base overlay-title-small">CAFETERIA</div>
-                            <div class="overlay-text-base overlay-text-small">
-                                Marca de cafeteria temática Queen: xícara se transforma em microfone de Freddie Mercury,
-                                unindo café e rock. Cores amarelo, preto, branco e cinza para elegância e protesto.
+                            <div class="overlay-title-base overlay-title-large">CARTAZ <br> ÍNDIO</div>
+                            <div class="overlay-text-base overlay-text-large">
+                                Cartaz ativista contra invasões de garimpos em terras indígenas. Apresenta líder indígena
+                                com trajes tradicionais e lettering "Brasil terra indígena". Detalhe em branco repete a
+                                palavra "invasão". Cores da bandeira do Brasil simbolizam a terra, centralizada em vermelho,
+                                representando o sangue derramado na exploração.
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 img-container mb-3">
-                    <img src="/assets/portfolio/kelly_de_paula/kelly_3.png" class="full-size" alt="Cartaz índio">
-                    <div class="overlay">
-                        <div class="overlay-title-base overlay-title-large">CARTAZ <br> ÍNDIO</div>
-                        <div class="overlay-text-base overlay-text-large">
-                            Cartaz ativista contra invasões de garimpos em terras indígenas. Apresenta líder indígena
-                            com trajes tradicionais e lettering "Brasil terra indígena". Detalhe em branco repete a
-                            palavra "invasão". Cores da bandeira do Brasil simbolizam a terra, centralizada em vermelho,
-                            representando o sangue derramado na exploração.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-12 text-center img-container mb-3">
-                    <img src="/assets/portfolio/kelly_de_paula/kelly_4.png" class="full-size" alt="Cartaz Woodstock">
-                    <div class="overlay">
-                        <div class="overlay-title-base overlay-title-large">CARTAZ <br> WOODSTOCK</div>
-                        <div class="overlay-text-base overlay-text-large">
-                            Cartaz promocional do festival de rock Woodstock (1969) com lettering psicodélico e groovy.
-                            Usa distorção de letras em formato de arco para destacar artistas e o nome do evento.
-                            Destaque para a escolha de tons entre duas cores na escala CMYK.
+                    <div class="col-lg-4 col-12 text-center img-container mb-3">
+                        <img src="/assets/portfolio/kelly_de_paula/kelly_4.png" class="full-size" alt="Cartaz Woodstock">
+                        <div class="overlay">
+                            <div class="overlay-title-base overlay-title-large">CARTAZ <br> WOODSTOCK</div>
+                            <div class="overlay-text-base overlay-text-large">
+                                Cartaz promocional do festival de rock Woodstock (1969) com lettering psicodélico e groovy.
+                                Usa distorção de letras em formato de arco para destacar artistas e o nome do evento.
+                                Destaque para a escolha de tons entre duas cores na escala CMYK.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
 
+        <script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
 </html>

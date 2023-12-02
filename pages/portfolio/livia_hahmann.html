@@ -1,105 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Livia Hahmann, Kevyn Borges, Isabella da Silveira, Kelly de Paula e Julia Santos">
+        <meta name="description" content="Projeto Programar - Meraki">
+        <meta name="keywords" content="designers, portfolio, senac">
+        <meta name="robots" content="index, follow">
+        <title>Portfolio - Livia Hahmann</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Livia Hahmann">
-    <meta name="description" content="Projeto Programar - Meraki">
-    <meta name="keywords" content="designers, portfolio, senac">
-    <meta name="robots" content="index, follow">
-    <title>Portfolio - Livia Hahmann</title>
+        <link rel="stylesheet" href="/styles/portfolio.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/styles/portfolio.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Paytone+One&display=swap" rel="stylesheet">
+    </head>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Paytone+One&display=swap" rel="stylesheet">
-
-    <script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="container-fluid" style="height: 100dvh">
-        <nav class="navbar bg-body-tertiary p-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/pages/designers.html">
-                    <img src="/assets/logo.png" alt="logo" class="img-fluid w-25" />
-                </a>
-                <div class="d-flex">
-                    <a href="/pages/designers.html">
-                        <button type="button" class="btn btn-outline-secondary px-3 me-3">Designers</button>
+    <body>
+        <div class="container-fluid" style="height: 100dvh">
+            <nav class="navbar bg-body-tertiary p-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/pages/designers.html">
+                        <img src="/assets/logo.png" alt="logo" class="img-fluid w-25" />
                     </a>
-                    <div class="dropdown me-3">
-                        <button class="btn btn-outline-secondary dropdown-toggle px-3" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da
-                                    Silveira</a></li>
-                        </ul>
+                    <div class="d-flex">
+                        <a href="/pages/designers.html">
+                            <button type="button" class="btn btn-outline-secondary px-3 me-3">Designers</button>
+                        </a>
+                        <div class="dropdown me-3">
+                            <button class="btn btn-outline-secondary dropdown-toggle px-3" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pages/portfolio/kevyn_borges.html">Kevyn Borges</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/julia_santos.html">Julia Santos</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/kelly_de_paula.html">Kelly de Paula</a></li>
+                                <li><a class="dropdown-item" href="/pages/portfolio/isabella_da_silveira.html">Isabella da Silveira</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
                     </div>
-                    <button class="btn btn-outline-danger px-3" type="button" onclick="deslogar()">Sair</button>
                 </div>
-            </div>
-        </nav>
-        <p class="title">LIVIA HAHMANN</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-12 d-flex flex-column">
-                    <div class="row flex-grow-1 mb-2 text-center img-container">
-                        <img src="/assets/portfolio/livia_hahmann/livia_1.png" class="image" alt="GEGATTO">
-                        <div class="overlay">
-                            <div class="overlay-title-base overlay-title-small">GEGATTO</div>
-                            <div class="overlay-text-base overlay-text-small">
-                                Logo inspirada em uma sorveteria imáginaria, cujo mascote seria o gato da logo. <br>
-                                O nome se baseia na junção de gato e gelato (sorvete em italiano).
+            </nav>
+            <p class="title">LIVIA HAHMANN</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-12 d-flex flex-column">
+                        <div class="row flex-grow-1 mb-2 text-center img-container">
+                            <img src="/assets/portfolio/livia_hahmann/livia_1.png" class="image" alt="GEGATTO">
+                            <div class="overlay">
+                                <div class="overlay-title-base overlay-title-small">GEGATTO</div>
+                                <div class="overlay-text-base overlay-text-small">
+                                    Logo inspirada em uma sorveteria imáginaria, cujo mascote seria o gato da logo. <br>
+                                    O nome se baseia na junção de gato e gelato (sorvete em italiano).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row flex-grow-1 img-container">
+                            <img src="/assets/portfolio/livia_hahmann/livia_2.png" alt="SKULLP">
+                            <div class="overlay">
+                                <div class="overlay-title-base overlay-title-small">SKULLP</div>
+                                <div class="overlay-text-base overlay-text-small">
+                                    Logo vetorizada baseada em uma empresa de bonecos colecionaveis, que por sua vez tinha
+                                    como caracteristica principal uma caveira como cabeça em cada item.
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row flex-grow-1 img-container">
-                        <img src="/assets/portfolio/livia_hahmann/livia_2.png" alt="SKULLP">
+                    <div class="col-lg-4 col-12 text-center img-container">
+                        <img src="/assets/portfolio/livia_hahmann/livia_4.png" alt="CARTA DE TABULEIRO VERSO">
                         <div class="overlay">
-                            <div class="overlay-title-base overlay-title-small">SKULLP</div>
-                            <div class="overlay-text-base overlay-text-small">
-                                Logo vetorizada baseada em uma empresa de bonecos colecionaveis, que por sua vez tinha
-                                como caracteristica principal uma caveira como cabeça em cada item.
+                            <div class="overlay-title-base overlay-title-large">CARTA DE TABULEIRO</div>
+                            <div class="overlay-text-base overlay-text-large">
+                                A arte foi inspirada em um jogo de cartas onde a xerife era uma das personagens. <br>
+                                Reservada e imersa em seu proprio caos, ela era mãe de uma das protagonistas da trama.
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-12 text-center img-container">
-                    <img src="/assets/portfolio/livia_hahmann/livia_4.png" alt="CARTA DE TABULEIRO VERSO">
-                    <div class="overlay">
-                        <div class="overlay-title-base overlay-title-large">CARTA DE TABULEIRO</div>
-                        <div class="overlay-text-base overlay-text-large">
-                            A arte foi inspirada em um jogo de cartas onde a xerife era uma das personagens. <br>
-                            Reservada e imersa em seu proprio caos, ela era mãe de uma das protagonistas da trama.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-12 text-center img-container">
-                    <img src="/assets/portfolio/livia_hahmann/livia_3.png" alt="CARTA DE TABULEIRO FRENTE">
-                    <div class="overlay">
-                        <div class="overlay-title-base overlay-title-large">CARTA DE TABULEIRO</div>
-                        <div class="overlay-text-base overlay-text-large">
-                            A diagramação foi feita ao verso da carta, dando ênfase e explicando um pouco da história
-                            num contexto geral para que os jogadores se familiarizassem com cada personagem.
+                    <div class="col-lg-4 col-12 text-center img-container">
+                        <img src="/assets/portfolio/livia_hahmann/livia_3.png" alt="CARTA DE TABULEIRO FRENTE">
+                        <div class="overlay">
+                            <div class="overlay-title-base overlay-title-large">CARTA DE TABULEIRO</div>
+                            <div class="overlay-text-base overlay-text-large">
+                                A diagramação foi feita ao verso da carta, dando ênfase e explicando um pouco da história
+                                num contexto geral para que os jogadores se familiarizassem com cada personagem.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
 
+        <script type="text/javascript" language="javascript" src="/scripts/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
 </html>
